@@ -4,6 +4,7 @@ cuso is a (Copper)smith (So)lver which automatically finds small roots of multiv
 
 ## Multivariate Coppersmith Problems
 Many cryptanalytic problems involve finding a bounded solution to a system of modular or integer polynomials. This includes factoring RSA moduli when 1/4 of the bits are known, recovering RSA plaintexts with fixed padding, and more. Formally, a multivariate Coppersmith problem is defined by a system of polynomials with integer coefficients. Each polynomial $f_i$ has the form
+
 $$ 
 \begin{align*}
 f_i(x_1, \dots, x_\ell) &\equiv 0 \pmod{N_i} & \text{ where } N_i\text{ is known, or} \\
@@ -11,7 +12,9 @@ f_i(x_1, \dots, x_\ell) &\equiv 0 \pmod{p_i} & \text{ where } p_i\text{ is unkno
 f_i(x_1, \dots, x_\ell) &= 0 & \text {with no modulus}.
 \end{align*}
 $$
+
 In some cases when $p_i$ is unknown, a multiple $N_i$ of $p_i$ is known. A Coppersmith problem also includes a collection of integer bounds $(X_1, \dots, X_\ell)$. The goal is to find all solutions $(r_1, \dots, r_\ell)$ that satisfy all of the polynomials and the bounds:
+
 $$ |r_i| < X_i \quad 1 \le i \le \ell. $$
 
 ## Usage
