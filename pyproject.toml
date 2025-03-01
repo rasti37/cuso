@@ -1,0 +1,21 @@
+[project]
+name = "cuso"
+version = "0.4.0"
+description = "Multivariate Coppersmith solver to find small roots of modular polynomials"
+readme = "README.md"
+license = {text = "LGPL-3.0-or-later"}
+authors = [
+    {name = "Keegan Ryan"},
+]
+dependencies = [
+    "fpylll",
+    "igraph",
+]
+
+[tool.pylint]
+extension-pkg-allow-list = [
+    "sage.all",
+]
+disable=[
+  'no-name-in-module'
+]
