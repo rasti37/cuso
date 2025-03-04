@@ -38,7 +38,7 @@ def get_polynomial(xs, ys, tshifts_to_include):
     except AttributeError as exc:
         warnings.warn(
             "Multivariate polynomial interpolation failed. It's likely that you need to "
-            "upgrade SageMath to a newer version (9.8+) that has this feature."
+            "upgrade SageMath to a newer version (9.8+) that has this feature.",
             UserWarning
         )
         raise RuntimeError("SageMath version is too old.")

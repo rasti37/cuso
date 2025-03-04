@@ -310,7 +310,11 @@ def parse_relations(
 
     # if expect_modulus and inferred_modulus is None:
     #    raise ValueError("Modulus information is expected.")
-    if not expect_modulus and inferred_moduli is not None:
+    no_inferred_moduli = (inferred_moduli is None) or (
+        isinstance(inferred_moduli, list)
+        and all(inferred_modulus is None for inferred_modulus in inferred_moduli)
+    )
+    if not expect_modulus and not no_inferred_moduli:
         raise ValueError(
             "Modulus should not be specified if it can be inferred from the relations"
         )

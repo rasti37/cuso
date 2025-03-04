@@ -190,7 +190,7 @@ class RelationIdealGenerator(Strategy):
                 applied_diffs += [diff]
                 J = J + ideal1 * ideal2
 
-        self.logger.debug("Generated ideal for multiplicity %d", multiplicity)
+        self.logger.debug("Generated ideal for multiplicity %s", multiplicity)
         return J
 
     def run(self, relations: RelationSet, bounds: BoundSet) -> Iterator[RelationIdeal]:
